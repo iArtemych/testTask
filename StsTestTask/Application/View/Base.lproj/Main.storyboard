@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rwc-BI-Bdc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Рейсы-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Рейсы" id="BYZ-38-t0r" customClass="FlyViewController" customModule="StsTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n41-f7-6OR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dataCell" rowHeight="86" id="qKv-Cd-PWp" customClass="FlightTableViewCell" customModule="StsTestTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qKv-Cd-PWp" id="SgH-9M-8J9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFR-Lu-TrY">
+                                                    <rect key="frame" x="20" y="11" width="374" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rtyfgfghgfhgffghghfghgfhfghgfhgfhghgfhgffghgfhgfhgf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G67-aW-YV9">
+                                                    <rect key="frame" x="20" y="51.5" width="374" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vFR-Lu-TrY" firstAttribute="leading" secondItem="SgH-9M-8J9" secondAttribute="leading" constant="20" id="3PK-dK-LT4"/>
+                                                <constraint firstItem="G67-aW-YV9" firstAttribute="leading" secondItem="SgH-9M-8J9" secondAttribute="leading" constant="20" id="Ar9-UM-5cY"/>
+                                                <constraint firstAttribute="trailing" secondItem="G67-aW-YV9" secondAttribute="trailing" constant="20" id="LUy-ly-tZ2"/>
+                                                <constraint firstAttribute="trailing" secondItem="vFR-Lu-TrY" secondAttribute="trailing" constant="20" id="VtE-x3-hXG"/>
+                                                <constraint firstItem="G67-aW-YV9" firstAttribute="top" secondItem="vFR-Lu-TrY" secondAttribute="bottom" constant="8" id="ajR-oI-Ioz"/>
+                                                <constraint firstItem="vFR-Lu-TrY" firstAttribute="top" secondItem="SgH-9M-8J9" secondAttribute="top" constant="11" id="rz9-lR-i48"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="flightDate" destination="G67-aW-YV9" id="9Ra-wQ-OjI"/>
+                                            <outlet property="flightName" destination="vFR-Lu-TrY" id="PmB-bZ-CqE"/>
+                                            <segue destination="bLc-S1-Lx7" kind="show" identifier="toFlightDetails" id="gsf-op-b3N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8To-I7-D5h"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7dt-Ki-r63"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n41-f7-6OR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="2XV-7a-PyJ"/>
+                            <constraint firstAttribute="bottom" secondItem="n41-f7-6OR" secondAttribute="bottom" id="EY1-cL-Bgv"/>
+                            <constraint firstItem="n41-f7-6OR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oz8-69-xlx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n41-f7-6OR" secondAttribute="trailing" id="Reu-66-p60"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Рейсы" id="PLH-zF-jjf"/>
+                    <connections>
+                        <outlet property="flightTable" destination="n41-f7-6OR" id="WvX-bW-s9G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Детали полета-->
+        <scene sceneID="I0t-a1-cpX">
+            <objects>
+                <viewController title="Детали полета" id="bLc-S1-Lx7" customClass="DetailFlightViewController" customModule="StsTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4e-hR-lNl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name flight" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxS-1m-QII">
+                                <rect key="frame" x="20" y="114" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3O-lA-N9z">
+                                <rect key="frame" x="20" y="255" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSx-ob-QyH">
+                                <rect key="frame" x="20" y="292" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-1k-coB">
+                                <rect key="frame" x="20" y="321" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0m-Bs-uyW">
+                                <rect key="frame" x="20" y="226" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flightDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3Q-1X-Rth">
+                                <rect key="frame" x="20" y="147.5" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flightGate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyT-28-SrM">
+                                <rect key="frame" x="20" y="176.5" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="estimateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-wF-Hds">
+                                <rect key="frame" x="20" y="358" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HyT-28-SrM" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="11N-ZZ-rqH"/>
+                            <constraint firstItem="sSx-ob-QyH" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="2ys-0f-Usg"/>
+                            <constraint firstItem="v3Q-1X-Rth" firstAttribute="top" secondItem="IxS-1m-QII" secondAttribute="bottom" constant="8" id="3CN-gZ-5si"/>
+                            <constraint firstItem="IxS-1m-QII" firstAttribute="top" secondItem="gvU-3G-VAu" secondAttribute="top" constant="26" id="4D6-1h-035"/>
+                            <constraint firstItem="Qea-1k-coB" firstAttribute="top" secondItem="sSx-ob-QyH" secondAttribute="bottom" constant="8" id="6g9-x9-fMi"/>
+                            <constraint firstItem="D0m-Bs-uyW" firstAttribute="top" secondItem="HyT-28-SrM" secondAttribute="bottom" constant="28.5" id="6gH-21-Ihs"/>
+                            <constraint firstItem="Qea-1k-coB" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="Bax-K7-bsr"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="HyT-28-SrM" secondAttribute="trailing" constant="20" id="EKt-DD-lfr"/>
+                            <constraint firstItem="s3O-lA-N9z" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="EMW-Jy-FXd"/>
+                            <constraint firstItem="v3Q-1X-Rth" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="Mmy-vG-4Xc"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="VMd-wF-Hds" secondAttribute="trailing" constant="20" id="OjX-Fv-kZy"/>
+                            <constraint firstItem="IxS-1m-QII" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="Par-49-W3O"/>
+                            <constraint firstItem="D0m-Bs-uyW" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="RCs-Eq-7Zh"/>
+                            <constraint firstItem="s3O-lA-N9z" firstAttribute="top" secondItem="D0m-Bs-uyW" secondAttribute="bottom" constant="8" id="REv-Gu-JR8"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="IxS-1m-QII" secondAttribute="trailing" constant="20" id="RMJ-jX-eE3"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="v3Q-1X-Rth" secondAttribute="trailing" constant="20" id="Yat-hG-frh"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="s3O-lA-N9z" secondAttribute="trailing" constant="20" id="ZYn-MN-mA5"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="Qea-1k-coB" secondAttribute="trailing" constant="20" id="eGh-Ip-VHm"/>
+                            <constraint firstItem="HyT-28-SrM" firstAttribute="top" secondItem="v3Q-1X-Rth" secondAttribute="bottom" constant="8" id="jUA-kS-zNE"/>
+                            <constraint firstItem="VMd-wF-Hds" firstAttribute="top" secondItem="Qea-1k-coB" secondAttribute="bottom" constant="16" id="kqM-fa-D53"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="sSx-ob-QyH" secondAttribute="trailing" constant="20" id="nfo-fZ-Vax"/>
+                            <constraint firstItem="gvU-3G-VAu" firstAttribute="trailing" secondItem="D0m-Bs-uyW" secondAttribute="trailing" constant="20" id="tGY-nR-tVE"/>
+                            <constraint firstItem="VMd-wF-Hds" firstAttribute="leading" secondItem="gvU-3G-VAu" secondAttribute="leading" constant="20" id="uyn-AP-3a8"/>
+                            <constraint firstItem="sSx-ob-QyH" firstAttribute="top" secondItem="s3O-lA-N9z" secondAttribute="bottom" constant="16" id="vNF-bu-2sn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gvU-3G-VAu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Детали полета" id="nM5-xA-fkD"/>
+                    <connections>
+                        <outlet property="flightDate" destination="v3Q-1X-Rth" id="OVO-Sw-bm7"/>
+                        <outlet property="flightEndTime" destination="Qea-1k-coB" id="Y5V-L7-sb4"/>
+                        <outlet property="flightEstimateTime" destination="VMd-wF-Hds" id="2WM-z2-eYX"/>
+                        <outlet property="flightFinishCountry" destination="s3O-lA-N9z" id="RRL-xQ-iku"/>
+                        <outlet property="flightGate" destination="HyT-28-SrM" id="I3C-5Y-ipQ"/>
+                        <outlet property="flightName" destination="IxS-1m-QII" id="H20-Eb-37z"/>
+                        <outlet property="flightStartCountry" destination="D0m-Bs-uyW" id="VcY-30-cWn"/>
+                        <outlet property="flightStartTime" destination="sSx-ob-QyH" id="Lec-fO-b4F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dl-Ps-Xrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039.1304347826087" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GnK-tL-5t2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rwc-BI-Bdc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I9n-Qy-EWB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g1G-OW-nP8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bs-cd-fnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
